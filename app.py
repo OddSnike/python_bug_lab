@@ -17,7 +17,7 @@ def is_even(n: int) -> bool:
     Expected: is_even(4) -> True, is_even(7) -> False, is_even(-2) -> True.
     """
     # BUG: Checks for 1 instead of 0
-    return n % 2 == 1
+    return n % 2 == 0
 
 
 def clamp_number(value: float, min_val: float, max_val: float) -> float:
@@ -27,9 +27,9 @@ def clamp_number(value: float, min_val: float, max_val: float) -> float:
     Expected: clamp_number(5, 10, 20) -> 10, clamp_number(25, 10, 20) -> 20, clamp_number(15, 10, 20) -> 15.
     """
     # BUG: Inverted boundary checks
-    if value < min_val:
+    if value > min_val:
         return max_val
-    elif value > max_val:
+    elif value < max_val:
         return min_val
     return value
 
