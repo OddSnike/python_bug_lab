@@ -53,7 +53,7 @@ def find_max_number(numbers: list) -> int:
     Expected: find_max_number([-10, -5, -20]) -> -5
     """
     # BUG: Initializing to 0 fails for all-negative lists
-    current_max = 0
+    current_max = -9999999999999999999
     for n in numbers:
         if n > current_max:
             current_max = n
